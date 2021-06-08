@@ -9,7 +9,7 @@ args = {
 }
 
 with DAG(
-    dag_id="sleep",
+    dag_id="uses_module",
     default_args=args,
     schedule_interval=None,
     start_date=days_ago(2),
