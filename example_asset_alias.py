@@ -43,7 +43,7 @@ with DAG(
     start_date=pendulum.datetime(2021, 1, 1, tz="UTC"),
     schedule=None,
     catchup=False,
-    tags=["producer", "asset"],
+    tags=["producer", "asset", "hi"],
 ):
 
     @task(outlets=[Asset("s3://bucket/my-task")])
