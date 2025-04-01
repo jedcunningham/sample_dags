@@ -10,7 +10,7 @@ with DAG(dag_id="demo"):
     #sleep >> hello >> astronomer
 
     # Second run
-    sleep = BashOperator(task_id="sleep", bash_command="sleep 45")
+    sleep = BashOperator(task_id="sleep", bash_command="sleep 1")
     hello = BashOperator(task_id="hello", bash_command="echo 'Hello Astronomer!!'")
 
     sleep >> hello
