@@ -3,9 +3,9 @@ from airflow.providers.standard.operators.bash import BashOperator
 
 with DAG(dag_id="demo"):
     # First
-    sleep = BashOperator(task_id="sleep", bash_command="sleep 5")
+    sleep = BashOperator(task_id="sleep", bash_command="sleep 25")
     hello = BashOperator(task_id="hello", bash_command="echo 'Hello'")
-    astronomer = BashOperator(task_id="astronomer", bash_command="echo 'Astonomer2'")
+    astronomer = BashOperator(task_id="astronomer", bash_command="echo 'Astonomer'")
 
     sleep >> hello >> astronomer
 
