@@ -4,5 +4,5 @@ with DAG(dag_id="anotherdemo"):
 
     @task
     def hi():
-        print("hello")
+        print("hello22")
 
