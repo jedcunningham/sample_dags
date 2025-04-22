@@ -6,3 +6,5 @@ with DAG(dag_id="anotherdemo"):
     def hi():
         print("hello22")
 
+    hi()
+
