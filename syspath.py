@@ -3,6 +3,8 @@ import pprint
 
 from airflow.sdk import DAG, task
 
+from foo import HI
+
 pprint.pprint(sys.path)
 
 with DAG(dag_id="syspath"):
@@ -10,6 +12,8 @@ with DAG(dag_id="syspath"):
     @task
     def print_syspath():
         pprint.pprint(sys.path)
+
+    print_syspath()
 
 
 
