@@ -3,9 +3,10 @@ import pprint
 
 from airflow.sdk import DAG, task
 
+pprint.pprint(sys.path)
+
 from foo import HI
 
-pprint.pprint(sys.path)
 
 with DAG(dag_id="syspath"):
 
