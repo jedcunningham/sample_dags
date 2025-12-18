@@ -1,7 +1,13 @@
 from airflow.sdk import DAG
 from airflow.providers.standard.operators.bash import BashOperator
 
-with DAG(dag_id="demo"):
+def on_success(**kwargs):
+    print("Hi, I'm in on_success_callback")
+
+
+
+
+with DAG(dag_id="demo", on_success_callback=on_success):
     sleep = BashOperator(task_id="sleep", bash_command="sleep 10")
     hello = BashOperator(task_id="hello_new", bash_command="echo 'Hello Seattle!'")
 
