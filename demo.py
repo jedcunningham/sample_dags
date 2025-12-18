@@ -1,6 +1,11 @@
 from airflow.sdk import DAG
 from airflow.providers.standard.operators.bash import BashOperator
 
+from airflow.models.connection import Connection
+
+
+conn = Connection.get("my_git_conn")
+
 def on_success(**kwargs):
     print("Hi, I'm in on_success_callback")
 
