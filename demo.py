@@ -15,6 +15,6 @@ def on_success(**kwargs):
 
 with DAG(dag_id="demo", on_success_callback=on_success):
     sleep = BashOperator(task_id="sleep", bash_command="sleep 10")
-    hello = BashOperator(task_id="hello_new", bash_command="echo 'Hello world!'")
+    hello = BashOperator(task_id="hello_new", bash_command="echo 'Hello world2!'")
 
     sleep >> hello
